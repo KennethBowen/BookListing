@@ -22,13 +22,13 @@ import static android.R.attr.resource;
 
 public class BookAdapter extends ArrayAdapter<Book> {
 
-    public BookAdapter(@NonNull Context context, List<Book> books) {
+    public BookAdapter(Context context, List<Book> books) {
         super(context, 0, books);
     }
 
-    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         View itemListView = convertView;
         if (itemListView == null){
             itemListView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
